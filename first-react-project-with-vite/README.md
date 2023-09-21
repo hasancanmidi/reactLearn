@@ -1,8 +1,26 @@
-# React + Vite
+## Ortam Kurulumu
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeyi başlatmak için iki farklı yöntem kullanabilirsiniz:
 
-Currently, two official plugins are available:
+### Yöntem 1: create-react-app.dev Kullanarak
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Terminali açın ve aşağıdaki komutu girin:
+
+npx create-react-app my-app
+
+2. 'my-app' kısmını kendi proje adınıza değiştirerek istediğiniz bir klasöre ortamı kurun.
+
+### Yöntem 2: Vite Kullanarak
+
+1. Terminali açın ve aşağıdaki komutu girin:
+
+npm create vite@latest
+
+2. Daha sonra aşağıdaki komutu kullanarak gerekli bağımlılıkları kurun:
+
+npm install
+
+3. Proje başlatmak için aşağıdaki komutu kullanın:
+
+npm run dev
+
