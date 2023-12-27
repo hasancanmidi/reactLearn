@@ -10,7 +10,7 @@ export default function ProductList() {
     //component yüklediğinde yapılmasını istediğin kodu buraya yazıyosun
     let productService = new ProductService();
     productService.getProducts().then((result) => setProducts(result.data));
-  });
+  },[]);
 
   return (
     <div>
