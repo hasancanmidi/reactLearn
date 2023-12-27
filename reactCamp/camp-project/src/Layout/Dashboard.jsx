@@ -9,10 +9,10 @@ export default function Dashboard() {
     <div>
       <Grid>
         <Grid.Row>
-          <Grid.Column width={4}>
+          <Grid.Column width={3}>
             <Categories />
           </Grid.Column>
-          <Grid.Column width={12}>
+          <Grid.Column width={13}>
             <ProductList />
           </Grid.Column>
         </Grid.Row>

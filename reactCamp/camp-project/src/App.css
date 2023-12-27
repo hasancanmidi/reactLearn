@@ -4,3 +4,23 @@
 .main{
   margin-top: 6em;
 }
+.product-image-container {
+  width: 200px;  /* veya istediğiniz genişlik */
+  height: 200px; /* veya istediğiniz yükseklik */
+  display: flex; /* İçeriği merkeze almak için */
+  justify-content: center; /* Yatay olarak merkeze al */
+  align-items: center; /* Dikey olarak merkeze al */
+  position: relative; /* Pozisyon ayarlamaları için */
+}
+
+.product-image-container img {
+  max-width: 100%;  /* Genişliği konteynere sığdır */
+  max-height: 100%; /* Yüksekliği konteynere sığdır */
+  object-fit: cover; /* Resmi güzel bir şekilde sığdır */
+  position: absolute; /* Pozisyonu ayarla */
+  top: 50%;  /* Üstten yarıya ayarla */
+  left: 70%; /* Soldan yarıya ayarla */
+  transform: translate(-50%, -50%); /* Tam ortaya al */
+}
+
+
