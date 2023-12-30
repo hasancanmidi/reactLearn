@@ -1,15 +1,24 @@
 import Text from './components/Text'
 import Button from './components/Button'
+import { useState } from 'react'
 
 function App() {
+
+  const [count, setCount] = useState(0)
+  //const [değişken, değişkeni setlemek istediğin fonksiyon] = useState("DEFAULF")
+
   return (
     <div>
-       <Text number="1" lesson={"React Eğitimi"}/>
+      <Button buttonName={"Azalt"} onClick={() => setCount(count - 1)} />
+      <div>{count}</div>
+      <Button buttonName={"Artır"} onClick={() => setCount(count + 1)} />
+
+       {/* <Text number="1" lesson={"React Eğitimi"}/>
        <Text number="2" lesson={"C# Eğitimi"}/>
        <Text number="3" lesson={"Java Eğitimi"}/>
        <Button buttonName={"Ekle"}/>
        <Button buttonName={"Sil"}/>
-       <Button buttonName={"Güncelle"}/>
+       <Button buttonName={"Güncelle"}/> */}
     </div>
   )
 }
