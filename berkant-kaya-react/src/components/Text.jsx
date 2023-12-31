@@ -1,6 +1,6 @@
-const Text = ({number}) => {
+const Text = ({name}) => {
   return (
-    <div>React Eğitimi {number}</div>
+    <div>{name}</div>
   )
 }
 
