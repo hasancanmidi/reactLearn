@@ -1,29 +1,31 @@
-import React from "react";
-import { Menu, Dropdown, Button, Container } from "semantic-ui-react";
+import React, {useState} from "react";
+import { Container, Menu } from "semantic-ui-react";
+import SignedIn from "../Components/SignedIn";
+import SignedOut from "../Components/SignedOut";
 
-const Header = () => {
+
+export default function Navi() {
+  const [isAuthenticated, setIsAuthenticated] = useState(true)
+  function handleSignOut(params){
+    setIsAuthenticated(false)
+  }
+  function handleSignIn(params){
+    setIsAuthenticated(true)
+  }
   return (
-    <Menu size="mini">
-      <Container>
-      <Menu.Item name="home" />
-      <Menu.Item name="messages" />
+    <div>
+      <Menu inverted fixed="top">
+        <Container>
+          <Menu.Item name="Anasayfa" />
+          <Menu.Item name="Ürünler" />
+          
+          <Menu.Menu position="right">
+            {isAuthenticated ? <SignedIn SignOut={handleSignOut} /> : <SignedOut SignIn={handleSignIn}/>}
 
-      <Menu.Menu position="right">
-        <Dropdown item text="Language">
-          <Dropdown.Menu>
-            <Dropdown.Item>English</Dropdown.Item>
-            <Dropdown.Item>Russian</Dropdown.Item>
-            <Dropdown.Item>Spanish</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+          </Menu.Menu>
 
-        <Menu.Item>
-          <Button primary>Sign Up</Button>
-        </Menu.Item>
-      </Menu.Menu>
-    </Container>  
-    </Menu>
+        </Container>
+      </Menu>
+    </div>
   );
-};
-
-export default Header;
+}
