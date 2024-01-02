@@ -6,22 +6,26 @@ import { useNavigate } from "react-router-dom";
 
 const ProductCard = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const data = await getProducts();
-        setProducts(data);
-      } catch (error) {
-        console.error("Ürünler yüklenirken bir hata oluştu:", error);
-      }
-    };
-    
+const fetchProducts = async () => {
+  try {
+    const data = await getProducts();
+    setProducts(data);
+  } catch (error) {
+    console.error("Ürünler yüklenirken bir hata oluştu:", error);
+  }
+};
+
+
     fetchProducts();
   }, []); // Boş bağımlılık dizisi, bu effect'in bir kez çalışmasını sağlar
 
-  const HomePage = () => {
-    const navitage = useNavigate();
+  const goToProductDetail = (productId) => {
+    navigate(`/detail/${productId}`); // Doğru URL
+  };
+  
 
     return (
       <div>
@@ -29,7 +33,7 @@ const ProductCard = () => {
           {products.map((product) => (
             <Card
               key={product.id}
-              onClick={() => navitage(`detail/${product.id}`)}
+              onClick={() => goToProductDetail(`detail/${product.id}`)}
               style={{ cursor: "pointer" }}
             >
               <div>
@@ -58,5 +62,4 @@ const ProductCard = () => {
       </div>
     );
   };
-};
 export default ProductCard;

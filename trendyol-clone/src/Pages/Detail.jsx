@@ -17,7 +17,7 @@ const Detail = () => {
     }
   return (
     <div>
-        <div>{getDetail.name}</div>
+        <div>{getDetail.title}</div>
     </div>
   )
 }
