@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryList from "./CategoryList";
+import CategoryList from "../Components/CategoryList";
 import { Grid, GridColumn, GridRow } from "semantic-ui-react";
 import ProductCard from "../Components/ProductCard";
 import { useState } from 'react';
