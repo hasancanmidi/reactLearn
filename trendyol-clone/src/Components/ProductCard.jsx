@@ -33,7 +33,7 @@ const fetchProducts = async () => {
           {products.map((product) => (
             <Card
               key={product.id}
-              onClick={() => goToProductDetail(`detail/${product.id}`)}
+              onClick={() => goToProductDetail(product.id)}
               style={{ cursor: "pointer" }}
             >
               <div>
