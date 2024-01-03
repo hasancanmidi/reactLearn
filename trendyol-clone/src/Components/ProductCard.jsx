@@ -29,18 +29,9 @@ const ProductCard = () => {
     <div>
       <Card.Group>
         {products.map((product) => (
-          <Card
-            key={product.id}
-            onClick={() => goToProductDetail(product.id)}
-            style={{ cursor: "pointer" }}
-          >
+          <Card key={product.id} onClick={() => goToProductDetail(product.id)} style={{ cursor: "pointer" }}>
             <div>
-              <Image
-                className="product-image-container"
-                src={product.image}
-                wrapped
-                ui={false}
-              />
+              <Image className="product-image-container" src={product.image} wrapped ui={false}/>
             </div>
             <Card.Content>
               <Card.Header>{product.title}</Card.Header>

@@ -2,6 +2,7 @@ import './App.css';
 import HomePage from './Pages/HomePage';
 import { BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Detail from './Pages/Detail';
+import CartDetail from './Pages/CartDetail';
 
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
     <div className="App">
     <Router>
       <Routes>
-        <Route path='/' element={<HomePage/>}/>
+        <Route  path='/' element={<HomePage/>}/>
         <Route path='/detail/:id' element={<Detail/>}/>
+        <Route path='/cart' element={<CartDetail/>}/>
       </Routes>
     </Router>
     </div>

@@ -34,10 +34,11 @@ const Detail = () => {
   if (!getDetail) {
     return <div>Veri Yükleniyor...</div>;
   }
+  
   return (
     <>
       <Header/>
-      <CardGroup  style={{marginTop:"4em", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <CardGroup style={{marginTop:"4em", display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <Card>
           <Image src={getDetail.image} wrapped ui={false} />
           <CardContent>

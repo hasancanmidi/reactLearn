@@ -1,9 +1,6 @@
 .App {
     text-align: center;
   }
-  .main{
-    margin-top: 7em;
-  }
   .product-image-container {
     width: 200px;  /* veya istediğiniz genişlik */
     height: 200px; /* veya istediğiniz yükseklik */
